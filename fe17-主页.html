@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<meta charset="utf-8">
+<title>个人主页</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #bg {
+            position: relative;
+
+            background-image: url(3.jpg);
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        #bg .box {
+            text-align: center;
+        }
+        #bg .xiangbo {
+            width: 400px;
+        }
+        #bg .btns {
+            margin-top: 56px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #bg btn {
+            color: #3b5ad0;
+            padding: 20px 70px;
+            border: 1px solid rgb(106, 122, 232);
+            transform-origin: center center 0px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        #bg btn:hover {
+            transform: none;
+            background-color: rgba(246, 17, 51, 0.09);
+            color: #a9feff;
+        }
+        #bg .btn-huayou {
+            transform: matrix3d(1, 0, 0, 0.001, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            margin-right: 128px;
+        }
+        #bg .btn-sheying {
+            transform: matrix3d(1, 0, 0, -0.001, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        }
+
+        #top-all {
+            position: absolute;
+            top: 0;
+            /*bottom: 0;*/
+            /*left: 0;*/
+            /*right: 0;*/
+            color: #a9feff;;
+            /*width: 1136px;*/
+            box-sizing: border-box;
+            width: 100%;
+            padding: 0 70px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background-color: rgba(36,33,46,0.48) !important;
+            box-shadow: none !important;
+        }
+        #top-left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #top-left text {
+            margin-right: 7px;
+            padding: 0 16px;
+            height: 56px;
+            line-height: 56px;
+            font-size: 14px;
+            z-index: 1;
+            cursor: pointer;
+        }
+        #top-left text:hover {
+            color: #b9a6ff;
+        }
+        #top-left img {
+            width: 112px;
+        }
+        #top-right text {
+            padding: 10px;
+            height: 56px;
+            line-height: 56px;
+            font-size: 14px;
+            z-index: 1;
+            cursor: pointer;
+        }
+        #top-right span {
+            background-color: #384c54;
+            width: 2px;
+            height: 12px;
+            font-size: 12px;
+            display: inline-block;
+        }
+        #top-right text:hover {
+            color: #b7afaf;
+        }
+        #top-zhuan {
+            width: 50px;
+            color: #4fb1ff;
+            opacity: 0.35
+        }
+        #top-zhuan-two {
+            width: 20px;
+            color: rgb(154, 234, 224);
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="bg">
+        <div id='top-all'>
+        <div id="top-left">
+            <i id='top-zhuan'class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+            <text>主站</text>
+            <text>首页</text>
+            <text id='play-tanchuang'>弹窗图</text>
+            <text id='play-lunbo'>轮播图</text>
+            <text id='play-bofang' >播放器</text>
+        </div>
+        <div id="top-right">
+            <text>登陆</text>
+            <span ></span>
+            <text>注册</text>
+            <i id='top-zhuan-two'class="fa fa-cog fa-spin fa-3x fa-fw"></i>
+        </div>
+        </div>
+        <div class="box">
+            <!-- <img class="xiangbo" src="2.jpg"> -->
+            <div class="btns">
+                <btn class="btn-huayou">简历</btn>
+                <btn class="btn-sheying">作品</btn>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script >
+      let log = console.log.bind(console)
+      $('#play-bofang').on('click', function(){
+         window.open('file:///C:/Users/iwang/Desktop/%E8%AF%BE%E7%A8%8B/14/music-plyaer/fe19-1%E6%92%AD%E6%94%BE%E5%99%A8.html')
+      })
+      $('#play-lunbo').on('click', function(){
+          log('ok')
+         window.open('file:///C:/Users/iwang/Desktop/%E8%AF%BE%E7%A8%8B/14/fe14-1.html')
+      })
+      $('#play-tanchuang').on('click', function(){
+          log('ok')
+          window.open('file:///C:/Users/iwang/Desktop/%E8%AF%BE%E7%A8%8B/13/fe13%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A-3.html')
+
+      })
+
+
+    </script>
+</body>
+</html>
