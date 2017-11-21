@@ -129,23 +129,23 @@
     </style>
 </head>
 <body>
-    <audio id='zhuye-musicplayer' controls='controls' autoplay>
-      <source src="星空.mp3" >
+    <audio id='zhuye-musicplayer' src="" controls='controls' autoplay loop>
+      <!-- <source src="星空.mp3" >
       <source src="繁华的寂静.mp3" >
-      <source src="星星的夜空.mp3" >
+      <source src="星星的夜空.mp3" > -->
     </audio>
     <div id="bg">
         <div id='top-all'>
         <div id="top-left">
             <i id='top-zhuan'class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
             <text>主站</text>
-            <text id='play-denglu'>登陆窗</text>
+            <text id='play-denglu'>登陆页</text>
             <text id='play-tanchuang'>弹窗图</text>
             <text id='play-lunbo'>轮播图</text>
             <text id='play-bofang' >播放器</text>
         </div>
         <div id="top-right">
-            <text>登陆</text>
+            <text id='play-music'>音乐</text>
             <span ></span>
             <text>注册</text>
             <i id='top-zhuan-two'class="fa fa-cog fa-spin fa-3x fa-fw"></i>
@@ -161,7 +161,18 @@
     </div>
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
     <script >
-      let log = console.log.bind(console)    
+      let log = console.log.bind(console)
+      let Hw = {
+         list: ['星空','繁华的寂静','星星的夜空'],
+         now: 0,
+      }
+      $('#zhuye-musicplayer')[0].src = Hw.list[0] + '.mp3'
+      $('#play-music').on('click', function(){
+         $('#zhuye-musicplayer')[0].src = Hw.list[2] + '.mp3'
+      })
+      $('#play-denglu').on('click',function(){
+         window.open('file:///C:/Users/iwang/Desktop/%E8%AF%BE%E7%A8%8B/%E7%99%BB%E9%99%86%E9%A1%B5%E9%9D%A2/fe16-%E7%99%BB%E9%99%86%E7%95%8C%E9%9D%A2.html')
+       })
       $('#play-bofang').on('click', function(){
          window.open('file:///C:/Users/iwang/Desktop/%E8%AF%BE%E7%A8%8B/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/music-player/fe19-1%E6%92%AD%E6%94%BE%E5%99%A8.html')
       })
@@ -172,8 +183,6 @@
 
           window.open('file:///C:/Users/iwang/Desktop/%E8%AF%BE%E7%A8%8B/%E5%BC%B9%E7%AA%97%E6%95%88%E6%9E%9C/tanchuang/tanchuang-2.html')
       })
-
-
     </script>
 </body>
 </html>
