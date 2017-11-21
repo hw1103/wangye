@@ -123,15 +123,23 @@
             color: rgb(154, 234, 224);
             font-size: 20px;
         }
+        #zhuye-musicplayer{
+            display: none;
+        }
     </style>
 </head>
 <body>
+    <audio id='zhuye-musicplayer' controls='controls' autoplay>
+      <source src="星空.mp3" >
+      <source src="繁华的寂静.mp3" >
+      <source src="星星的夜空.mp3" >
+    </audio>
     <div id="bg">
         <div id='top-all'>
         <div id="top-left">
             <i id='top-zhuan'class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
             <text>主站</text>
-            <text>首页</text>
+            <text id='play-denglu'>登陆窗</text>
             <text id='play-tanchuang'>弹窗图</text>
             <text id='play-lunbo'>轮播图</text>
             <text id='play-bofang' >播放器</text>
@@ -153,18 +161,16 @@
     </div>
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
     <script >
-      let log = console.log.bind(console)
+      let log = console.log.bind(console)    
       $('#play-bofang').on('click', function(){
-         window.open('file:///C:/Users/iwang/Desktop/%E8%AF%BE%E7%A8%8B/14/music-plyaer/fe19-1%E6%92%AD%E6%94%BE%E5%99%A8.html')
+         window.open('file:///C:/Users/iwang/Desktop/%E8%AF%BE%E7%A8%8B/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/music-player/fe19-1%E6%92%AD%E6%94%BE%E5%99%A8.html')
       })
       $('#play-lunbo').on('click', function(){
-          log('ok')
-         window.open('file:///C:/Users/iwang/Desktop/%E8%AF%BE%E7%A8%8B/14/fe14-1.html')
+         window.open('file:///C:/Users/iwang/Desktop/%E8%AF%BE%E7%A8%8B/%E8%BD%AE%E6%92%AD%E5%9B%BE/lunbo-tu/fe14-1.html')
       })
       $('#play-tanchuang').on('click', function(){
-          log('ok')
-          window.open('file:///C:/Users/iwang/Desktop/%E8%AF%BE%E7%A8%8B/13/fe13%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A-3.html')
 
+          window.open('file:///C:/Users/iwang/Desktop/%E8%AF%BE%E7%A8%8B/%E5%BC%B9%E7%AA%97%E6%95%88%E6%9E%9C/tanchuang/tanchuang-2.html')
       })
 
 
